@@ -15,7 +15,7 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
 import SaveIcon from '@material-ui/icons/Save';
 
-import Layout from '../src/components/Layout';
+import Layout from '../components/Layout';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@material-ui/core';
 
-import Layout from '../src/components/Layout';
-import ProTip from '../src/components/ProTip';
+import Layout from '../components/Layout';
+import ProTip from '../components/ProTip';
 
 export default function Index() {
   return (

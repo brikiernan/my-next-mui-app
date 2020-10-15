@@ -8,9 +8,9 @@ import {
   Button
 } from '@material-ui/core';
 
-import { User } from '../interfaces';
+import { User } from '../lib/interfaces';
 import Layout from './Layout';
-import Link from '../../src/components/Link';
+import Link from '../components/Link';
 
 type ListDetailProps = {
   item: User;
@@ -55,7 +55,7 @@ const ListDetail = ({ item: user }: ListDetailProps) => {
           <CardActions>
             <Button variant='outlined'>
               <Link color='inherit' href='/users'>
-                Back To User List
+                Back To Users
               </Link>
             </Button>
           </CardActions>

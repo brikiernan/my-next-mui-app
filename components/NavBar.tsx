@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Button, Toolbar, Typography } from '@material-ui/core';
-import Link from '../../src/components/Link';
+import Link from '../components/Link';
 
 const useStyles = makeStyles(() => ({
   title: {
