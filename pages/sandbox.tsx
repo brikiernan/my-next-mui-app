@@ -32,11 +32,11 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function About() {
+export default function Sandbox() {
   const classes = useStyles();
 
   return (
-    <Layout title='About'>
+    <Layout title='Sandbox'>
       <Box marginTop={12}>
         <Grid container direction='row' justify='center' alignItems='center' spacing={6}>
           <Grid item xs={8}>
@@ -98,7 +98,6 @@ export default function About() {
                 <Button variant='contained' color='secondary' startIcon={<DeleteIcon />}>
                   Delete
                 </Button>
-                {/* This Button uses a Font Icon, see the installation instructions in the Icon component docs. */}
                 <Button variant='contained' color='primary' endIcon={<SendIcon />}>
                   Send
                 </Button>

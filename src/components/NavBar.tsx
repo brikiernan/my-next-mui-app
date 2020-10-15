@@ -26,8 +26,8 @@ export default function NavBar() {
           </Link>
         </Typography>
         <Typography variant='body1' className={classes.navLink}>
-          <Link href='/about' color='inherit'>
-            About
+          <Link href='/sandbox' color='inherit'>
+            Sandbox
           </Link>
         </Typography>
         <Typography variant='body1' className={classes.navLink}>

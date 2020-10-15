@@ -1,14 +1,68 @@
+import {
+  Card,
+  CardActions,
+  CardContent,
+  Typography,
+  Box,
+  makeStyles,
+  Button
+} from '@material-ui/core';
+
 import { User } from '../interfaces';
+import Layout from './Layout';
+import Link from '../../src/components/Link';
 
 type ListDetailProps = {
   item: User;
 };
 
-const ListDetail = ({ item: user }: ListDetailProps) => (
-  <div>
-    <h1>Detail for {user.name}</h1>
-    <p>ID: {user.id}</p>
-  </div>
-);
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+    padding: '1rem'
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)'
+  },
+  title: {
+    fontSize: 14
+  },
+  pos: {
+    marginBottom: 0
+  }
+});
+
+const ListDetail = ({ item: user }: ListDetailProps) => {
+  const classes = useStyles();
+
+  return (
+    <Layout>
+      <Box maxWidth={'50rem'} mx='auto'>
+        <Card className={classes.root}>
+          <CardContent>
+            <Typography className={classes.title} color='textSecondary' gutterBottom>
+              User Details
+            </Typography>
+            <Typography variant='h5' component='h2'>
+              Name: {user.name}
+            </Typography>
+            <Typography className={classes.pos} color='textSecondary'>
+              ID: {user.id}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button variant='outlined'>
+              <Link color='inherit' href='/users'>
+                Back To User List
+              </Link>
+            </Button>
+          </CardActions>
+        </Card>
+      </Box>
+    </Layout>
+  );
+};
 
 export default ListDetail;

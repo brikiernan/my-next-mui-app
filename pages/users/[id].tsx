@@ -4,6 +4,7 @@ import { User } from '../../src/interfaces';
 import { sampleUserData } from '../../src/utils/sample-data';
 import Layout from '../../src/components/Layout';
 import ListDetail from '../../src/components/ListDetail';
+import { Box } from '@material-ui/core';
 
 type Props = {
   item?: User;
@@ -13,7 +14,7 @@ type Props = {
 const StaticPropsDetail = ({ item, errors }: Props) => {
   if (errors) {
     return (
-      <Layout title='Error | Next.js + TypeScript Example'>
+      <Layout title='User Details'>
         <p>
           <span style={{ color: 'red' }}>Error:</span> {errors}
         </p>
@@ -22,8 +23,8 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
   }
 
   return (
-    <Layout title={`${item ? item.name : 'User Detail'} | Next.js + TypeScript Example`}>
-      {item && <ListDetail item={item} />}
+    <Layout title={`${item ? item.name + "'s Details" : 'User Details'}`}>
+      <Box mt={12}>{item && <ListDetail item={item} />}</Box>
     </Layout>
   );
 };
